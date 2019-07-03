@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gluco LogIn</title>
+  <title>Gluco</title>
   <!-- Estilos y responsivo -->
   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -20,10 +20,14 @@
   <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
 
+  <!-- Fuente de prueba -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
   <!-- TODO: Add SDKs for Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+
 
   <script>
     // Your web app's Firebase configuration
@@ -38,34 +42,66 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    
+
   </script>
 
 
 </head>
 
 <body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo"></h1>
+
+      <nav>
+        <ul>
+          <li><a href="#">¿Qué es gluco?</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Iniciar sesion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="limiter">
-    <div class="container-login100">
+    <div class="container-login100" style="height: 100%; justify-content: space-around">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="images/img-01.png" alt="IMG">
+      </div>
       <div class="wrap-login100">
-        <div class="login100-pic js-tilt" data-tilt>
-          <img src="images/img-01.png" alt="IMG">
-        </div>
-
-        <form class="login100-form validate-form">
-          <span class="login100-form-title">
-            Bienvenido a gluco
-          </span>
-
-          <div id="firebaseui-auth-container"></div>
-
-        </form>
+        <span class="login100-form-title" style="font-family: 'Roboto', sans-serif; font-size: 5rem">
+          Gluco
+        </span>
+        <span class="login100-form-title" style="font-family: 'Roboto', sans-serif;;">
+          <i>Seguridad en la palma de tu mano</i>
+        </span>
       </div>
     </div>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Log In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="firebaseui-auth-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
+  <!-- Gradients -->
+  <canvas id="canvas-basic"></canvas>
+  <script src="gradients/granim.min.js"></script>
+  <script src="gradients/mainGradient.js"></script>
+  <!-- JavaScript del index -->
   <script src="js/index.js"></script>
 </body>
 
