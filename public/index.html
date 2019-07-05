@@ -10,9 +10,10 @@
   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css-hamburgers/hamburgers.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css-hamburgers/hamburgers.min.css"> -->
   <link rel="stylesheet" type="text/css" href="css/util.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--  <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="bootstrap/js/popper.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -50,55 +51,18 @@
 
 <body>
 
-  <header>
-    <div class="container">
-      <h1 class="logo"></h1>
+ 
 
-      <nav>
-        <ul>
-          <li><a href="#">¿Qué es gluco?</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Iniciar sesion</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <div class="limiter">
-    <div class="container-login100" style="height: 100%; justify-content: space-around">
-      <div class="login100-pic js-tilt" data-tilt>
-        <img src="images/img-01.png" alt="IMG">
-      </div>
-      <div class="wrap-login100">
-        <span class="login100-form-title" style="font-family: 'Roboto', sans-serif; font-size: 5rem">
-          Gluco
-        </span>
-        <span class="login100-form-title" style="font-family: 'Roboto', sans-serif;;">
-          <i>Seguridad en la palma de tu mano</i>
-        </span>
-      </div>
-    </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Log In</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div id="firebaseui-auth-container"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
 
   <!-- Gradients -->
-  <canvas id="canvas-basic"></canvas>
+  <!--   <div id="firebaseui-auth-container"></div> -->
+  <canvas id="canvas-basic" style="position: absolute"></canvas>
+
+
   <script src="gradients/granim.min.js"></script>
   <script src="gradients/mainGradient.js"></script>
   <!-- JavaScript del index -->
