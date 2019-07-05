@@ -2,6 +2,7 @@ var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'diagonal',
     isPausedWhenNotInView: true,
+    stateTransitionSpeed:10000,
     states : {
         "default-state": {
             gradients: [

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gluco</title>
+  <!-- Estilos y responsivo -->
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <!-- Firebase UI -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
+
+  <!-- Fuente de prueba -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBxjR_-OlC1dJA3WwqfwzNs2mbp2wwpDUY",
+      authDomain: "gluco-87a10.firebaseapp.com",
+      databaseURL: "https://gluco-87a10.firebaseio.com",
+      projectId: "gluco-87a10",
+      storageBucket: "",
+      messagingSenderId: "858396479574",
+      appId: "1:858396479574:web:40586d26c4129273"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+  </script>
+
+
+</head>
+
+<body>
+
+
+
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark" " >
+    <div class="container">
+    <a class="navbar-brand" href="#">Logo Gluco</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navbar1">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter2">¿Qué es Gluco?</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter3">¿Por qué usar
+            Gluco?</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Log in</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+  <!--  -->
+
+  <div class="container" style="height: 100vh; display: flex;">
+    <div class="" style="transform: translate(0px,70%);">
+      <div class="row">
+        <div class="col-md-6">
+          <img style="width: 100%" src="images/img-01.png" alt="IMG">
+        </div>
+        <div class="col-md-6 text-center">
+          <h2>Gluco</h2>
+          <p>Frase mamadora</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <!-- Modal de log in -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Log In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="firebaseui-auth-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de explicacion -->
+  <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">¿Qué es Gluco?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de por que usar gluco -->
+
+  <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">¿Por qué usar Gluco?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <!-- Gradients -->
+  <canvas id="canvas-basic"></canvas>
+  <script src="gradients/granim.min.js"></script>
+  <script src="gradients/mainGradient.js"></script>
+  <!-- JavaScript del index -->
+  <script src="js/index.js"></script>
+</body>
+
+</html>
