@@ -586,13 +586,13 @@ body>.navbar-collapse:before {
 
 .sidebar:after,
 body>.navbar-collapse:after {
-    background: #9368E9;
-    background: -moz-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9368E9), color-stop(100%, #943bea));
-    background: -webkit-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: -o-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: -ms-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: linear-gradient(to bottom, #9368E9 0%, #943bea 100%);
+    background: #41E23C;
+    background: -moz-linear-gradient(top, #41E23C 0%, #41E23C 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #41E23C), color-stop(100%, #41E23C));
+    background: -webkit-linear-gradient(top, #41E23C 0%, #41E23C 100%);
+    background: -o-linear-gradient(top, #41E23C 0%, #41E23C 100%);
+    background: -ms-linear-gradient(top, #41E23C 0%,#41E23C 100%);
+    background: linear-gradient(to bottom, #41E23C 0%, #41E23C 100%);
     background-size: 150% 150%;
     z-index: 3;
     opacity: 1;
@@ -3887,7 +3887,7 @@ Copyright (c) 2015 Daniel Eden
     left: 0;
 }
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) 
     .navbar-form {
         margin-top: 21px;
         margin-bottom: 21px;
@@ -3969,11 +3969,11 @@ Copyright (c) 2015 Daniel Eden
     .card form [class*="col-"]:last-child {
         padding-right: 15px;
     }
-}
+}*/
 
 /*          Changes for small display      */
 
-@media (max-width: 991px) {
+/*@media (max-width: 991px) {
     .sidebar {
         right: 0 !important;
         left: auto;
@@ -4714,7 +4714,7 @@ Copyright (c) 2015 Daniel Eden
 .bootstrap-switch.bootstrap-switch-off:hover .bootstrap-switch-label {
     width: 26px !important;
     margin: 2px -15px -13px -11px;
-}
+}*/
 
 /*--------------------------------
 
@@ -4824,7 +4824,7 @@ License - nucleoapp.com/license/
     animation: nc-icon-spin 2s infinite linear;
 }
 
-@-webkit-keyframes nc-icon-spin {
+/*@-webkit-keyframes nc-icon-spin {
     0% {
         -webkit-transform: rotate(0deg);
     }
@@ -4857,7 +4857,7 @@ License - nucleoapp.com/license/
         -o-transform: rotate(360deg);
         transform: rotate(360deg);
     }
-}
+}*/
 
 /*------------------------
   rotated/flipped icons
