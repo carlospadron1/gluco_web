@@ -2091,7 +2091,7 @@ fieldset[disabled] .form-control {
     margin-top: 20px;
     vertical-align: middle;
     border-top: 4px dashed;
-    border-top: 4px solid\9;
+    border-top: 4px solid;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
 }
@@ -2105,12 +2105,12 @@ fieldset[disabled] .form-control {
     font-size: 16px;
 }
 
-.navbar.fixed {
+/*.navbar.fixed {
     width: calc(100% - $sidebar-width);
     right: 0;
     left: auto;
     border-radius: 0;
-}
+}*/
 
 .navbar .nc-icon {
     font-weight: 700;
@@ -2930,7 +2930,7 @@ Copyright (c) 2015 Daniel Eden
     top: 0;
     width: 1px;
     background-color: #DDDDDD;
-    card-body: "";
+    caret-color: "";
     position: absolute;
 }
 
@@ -4739,7 +4739,7 @@ License - nucleoapp.com/license/
     display: inline-block;
     font: normal normal normal 14px/1 'nucleo-icons';
     font-size: inherit;
-    speak: none;
+    speak-as: none;
     text-transform: none;
     /* Better Font Rendering */
     -webkit-font-smoothing: antialiased;
