@@ -812,3 +812,24 @@ table, td, tr, th, thead {
   background: #f7f7f7; }
   .error-page h1 {
     font-size: 4rem; }
+
+
+    .inputfile-1 + label {
+      color: #f1e5e6;
+      background-color: #d3394c;
+  }
+  
+  .inputfile-1:focus + label,
+  .inputfile-1.has-focus + label,
+  .inputfile-1 + label:hover {
+      background-color: #722040;
+  }
+  
+.input{
+  width: 150px;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 20px;
+    border-radius: 20px;
+}  
