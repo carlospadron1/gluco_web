@@ -37,6 +37,11 @@ function setInfo() { //Para mostrar la info una vez que ya está puesta
         var email = userInfo.email;
         var photoUrl = userInfo.photoURL;
         var uid = userInfo.uid;
+        console.log('En setInfo')
+        console.log(name)
+        console.log(email)
+        console.log(photoUrl)
+        console.log(uid)
 
         var docRef = db.collection('users').doc(uid)
 
@@ -119,7 +124,8 @@ function saveUserInfo() {
 
 
     console.log($('#name').val())
-    console.log($('#emailId').val())
+    var correo = $('#emailId').val()
+    console.log(correo)
     console.log($('#generoCombo').val())
     console.log($('#diabetesCombo').val())
     console.log(timestamp)
@@ -141,7 +147,7 @@ function saveUserInfo() {
         if (photoUrl == null) {
             user.updateProfile({
                 displayName: $('#name').val(),
-                email: $('#emailId').val(),
+                email: correo,
                 photoURL: 'https://i.redd.it/6giqv6zjkog21.jpg'
             }).then(function () {
                 docRef.set({
@@ -182,7 +188,7 @@ function saveUserInfo() {
             console.log($('#emailId').val())
             user.updateProfile({
                 displayName: $('#name').val(),
-                email: $('#emailId').val(),
+                email: correo,
                 photoURL: photoUrl
             }).then(function () {
                 docRef.set({
