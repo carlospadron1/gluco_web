@@ -4,7 +4,7 @@ $(document).ready(function () {
   // FirebaseUI config.
   var uiConfig = {
     signInFlow: 'popup',
-    signInSuccessUrl: 'home.html',
+    signInSuccessUrl: 'userConfig.html',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -31,9 +31,3 @@ $(document).ready(function () {
 });
 
 
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    console.log("con usuario")
-    window.location.replace('home.html')
-  }
-});
