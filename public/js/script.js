@@ -32,10 +32,16 @@ function renderDiet(doc) {
     let cardBlock = document.createElement('div')
     cardBlock.classList.add('card-block')
 
-    /*  */
+     let i = document.createElement('i')
+    i.classList.add('fa')
+    i.classList.add('fa-minus')
     let button1 = document.createElement('button')
-    button1.appendChild(document.createTextNode("Eliminar Dieta"))
     button1.classList.add('btnEliminar')
+    button1.classList.add('btn')
+    button1.classList.add('btn-circle')
+    button1.classList.add('btn-info2')
+    button1.classList.add('btn-lg')
+    button1.appendChild(i) 
     button1.onclick = function () {
         $('#dieta1').modal('show');
     }
@@ -157,14 +163,22 @@ function renderDiet2(doc) {
     cardBlock.classList.add('card-block')
 
     /*  */
+    let i = document.createElement('i')
+    i.classList.add('fa')
+    i.classList.add('fa-minus')
     let button2 = document.createElement('button')
-    button2.appendChild(document.createTextNode("Eliminar Dieta"))
     button2.classList.add('btnEliminar')
+    button2.classList.add('btnEliminar')
+    button2.classList.add('btn')
+    button2.classList.add('btn-circle')
+    button2.classList.add('btn-info2')
+    button2.classList.add('btn-lg')
+    button2.appendChild(i) 
     button2.onclick = function () {
         $('#dieta2').modal('show');
     }
 
-    /*  */
+    
 
     let cardTitle = document.createElement('h3')
     cardTitle.classList.add('card-title')
@@ -282,9 +296,16 @@ function renderDiet3(doc) {
     cardBlock.classList.add('card-block')
 
     /*  */
+    let i = document.createElement('i')
+    i.classList.add('fa')
+    i.classList.add('fa-minus')
     let button3 = document.createElement('button')
-    button3.appendChild(document.createTextNode("Eliminar Dieta"))
     button3.classList.add('btnEliminar')
+    button3.classList.add('btn')
+    button3.classList.add('btn-circle')
+    button3.classList.add('btn-info2')
+    button3.classList.add('btn-lg')
+    button3.appendChild(i) 
     button3.onclick = function () {
         $('#dieta3').modal('show');
     }
@@ -671,9 +692,9 @@ function eliminarDieta1() {
         })
 
         $('#dieta1').modal('hide');
-        setTimeout(function() {
+        setTimeout(function () {
             location.reload();
-          }, 2000);
+        }, 2000);
 
         getDiet1()
         getDiet2()
@@ -707,9 +728,9 @@ function eliminarDieta2() {
         })
 
         $('#dieta2').modal('hide');
-        setTimeout(function() {
+        setTimeout(function () {
             location.reload();
-          }, 2000);
+        }, 2000);
         getDiet1()
         getDiet2()
         getDiet3()
@@ -743,10 +764,10 @@ function eliminarDieta3() {
 
         })
         $('#dieta3').modal('hide');
-       
-        setTimeout(function() {
+
+        setTimeout(function () {
             location.reload();
-          }, 2000);
+        }, 2000);
 
         getDiet1()
         getDiet2()
