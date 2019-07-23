@@ -687,7 +687,7 @@ function eliminarDieta1() {
         Swal.fire({
             type: 'success',
             title: 'Listo!',
-            text: 'la dieta se eliminó correctamente'
+            text: 'La dieta se eliminó correctamente'
 
         })
 
@@ -723,7 +723,7 @@ function eliminarDieta2() {
         Swal.fire({
             type: 'success',
             title: 'Listo!',
-            text: 'la dieta se eliminó correctamente'
+            text: 'La dieta se eliminó correctamente'
 
         })
 
@@ -760,7 +760,7 @@ function eliminarDieta3() {
         Swal.fire({
             type: 'success',
             title: 'Listo!',
-            text: 'la dieta se eliminó correctamente'
+            text: 'La dieta se eliminó correctamente'
 
         })
         $('#dieta3').modal('hide');
