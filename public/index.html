@@ -1,192 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gluco</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Gluco</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-    <!-- Estilos y responsivo -->
+  <!-- Custom fonts for this template -->
 
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <script src="https://kit.fontawesome.com/9739b7a59f.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Firebase UI -->
-    <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
-    <!-- Fuente de prueba -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBxjR_-OlC1dJA3WwqfwzNs2mbp2wwpDUY",
-            authDomain: "gluco-87a10.firebaseapp.com",
-            databaseURL: "https://gluco-87a10.firebaseio.com",
-            projectId: "gluco-87a10",
-            storageBucket: "gluco-87a10.appspot.com",
-            messagingSenderId: "858396479574",
-            appId: "1:858396479574:web:40586d26c4129273"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBxjR_-OlC1dJA3WwqfwzNs2mbp2wwpDUY",
+      authDomain: "gluco-87a10.firebaseapp.com",
+      databaseURL: "https://gluco-87a10.firebaseio.com",
+      projectId: "gluco-87a10",
+      storageBucket: "gluco-87a10.appspot.com",
+      messagingSenderId: "858396479574",
+      appId: "1:858396479574:web:40586d26c4129273"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-    <title>Gluco</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
-        <div class=" container">
-            <a class="navbar-brand" href="#">Logo Gluco</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse text-center" id="navbar1">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter2">¿Qué es
-                            Gluco?</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter3">¿Por qué
-                            usar
-                            Gluco?</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Log in</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="container-main container">
-        <div class="row">
-            <div class="col-lg-6 text-center">
-                <img src="http://via.placeholder.com/400" alt="" class="image">
-            </div>
-            <div class="col-lg-6 text-center center title">
-                <h2>Gluco</h2><br>
-                <p>Estamos en desarollo para brindar un servicio de calidad</p>
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Gluco</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars" style="color:aliceblue"></i>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#modalGluco">¿Que
+              es gluco?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#modalPorque">¿Por
+              que usar gluco?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#logIn">Log
+              in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#signUp">Registrarse</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-
-
-
-    <!-- Modal -->
-    <!-- Modal de log in -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Log In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="firebaseui-auth-container"></div>
-                </div>
-            </div>
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="intro-text">
+            <div class="intro-lead-in">Bienvenido a Gluco</div>
+            <div class="intro-lead-in">Somos el glucometro más innovador en el mercado</div>
+            <!--  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
+          </div>
         </div>
-    </div>
-
-    <!-- Modal de explicacion -->
-    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">¿Qué es Gluco?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Gluco es el nuevo glucómetro que está revolucionando la manera de tomar lecturas en los niveles de
-                    glucosa en las personas. <br> Es fácil de usar y su diseño es ergonómico para la comodiad de los
-                    usuario. <br> <br>
-                </div>
-
-            </div>
+        <div class="col-md-6">
+          <div class="intro-text">
+            <div class="intro-lead-in">Bienvenido a Gluco</div>
+            <div class="intro-lead-in">Somos el glucometro más innovador en el mercado</div>
+            <!--  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
+          </div>
         </div>
-    </div>
+      </div>
+  </header>
 
-    <!-- Modal de por que usar gluco -->
-
-    <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">¿Por qué usar Gluco?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Gluco es fácil de usar y diferencia de otros glucómetros convencionales, que solo pueden guardar
-                    hasta 10 registros de las medidas de glucosa en la sangre, Gluco puede guardar los registros hasta
-                    dos años. Tambíen cuenta con su propia aplicación para simpre tener a la mano las mediciones de la
-                    glucosa. <br> <br>
-                </div>
-
-            </div>
+  <!-- Modal de explicacion -->
+  <div class="modal fade" id="modalGluco" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">¿Qué es Gluco?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          Gluco es el nuevo glucómetro que está revolucionando la manera de tomar lecturas en los niveles de
+          glucosa en las personas. <br> Es fácil de usar y su diseño es ergonómico para la comodiad de los
+          usuario. <br> <br>
+        </div>
+
+      </div>
     </div>
+  </div>
+
+  <!-- Modal de por que usar gluco -->
+  <div class="modal fade" id="modalPorque" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">¿Por qué usar Gluco?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Gluco es fácil de usar y diferencia de otros glucómetros convencionales, que solo pueden guardar
+          hasta 10 registros de las medidas de glucosa en la sangre, Gluco puede guardar los registros hasta
+          dos años. Tambíen cuenta con su propia aplicación para simpre tener a la mano las mediciones de la
+          glucosa. <br> <br>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Log in -->
+  <div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Log in</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12 box">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Correo Electronico</label>
+                <input type="email" class="form-control" id="logInEmail" aria-describedby="emailHelp"
+                  placeholder="Ingrese su correo electronico">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="logInPassword" placeholder="Ingrese su contraseña">
+              </div>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+  <!-- Modal de Sign up -->
+  <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Iniciar Sesión</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12 box">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Correo Electronico</label>
+                <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp"
+                  placeholder="Ingrese su correo electronico">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="signUpPassword" placeholder="Escriba su contraseña">
+                <label for="exampleInputPassword1">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="signUpPassword2" placeholder="Confirmar">
+              </div>
+              <button type="button" id="signUpbtn" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <!-- Gradients -->
-    <canvas id="canvas-basic"></canvas>
-    <script src="gradients/granim.min.js"></script>
-    <script src="gradients/mainGradient.js"></script>
-    <!-- JavaScript del index -->
-    <script src="js/index.js"></script>
 </body>
 
 </html>

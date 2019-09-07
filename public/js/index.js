@@ -1,33 +1,54 @@
-$(document).ready(function () {
+$('#signUpbtn').click(() => {
+  var flag = false
+  const email = $('#signUpEmail').val()
+  const password1 = $('#signUpPassword').val()
+  const password2 = $('#signUpPassword2').val()
+
+  console.log(`valor de mail '${email}', valor del pw '${password1}' y valor de ps2 '${password2}'`)
+
+  if (email != null && password1 == null || password2 == null) {
+    alert('escriba su contraseña')
+    return false
+  }
+  if (email == null || email.length <= 0 || password1 == null || password1.length <= 0 || password2 == null || password2.length <= 0) {
+    alert('llenar campos')
+    return false
+  }
+  if (password1 != password2) {
+    alert('contraseñas dif')
+    return false
+  }
+
+  if (email && password1 && password2) {
+    alert('jala')
+    firebase.auth().createUserWithEmailAndPassword(email, password1)
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        if (errorCode == 'auth/email-already-in-use') {
+          alert('este correo ya se encuetra en uso')
+          flag = true
+        }
+        if (errorCode == 'auth/invalid-email') {
+          alert('este correo no es valido')
+          flag = true
+        }
+        if (errorCode == 'auth/weak-password') {
+          alert('la contrase;a no es fuerte')
+          flag = true
+        }
+        if (errorCode == 'auth/operation-not-allowed') {
+          alert('habila el correo desde firebase')
+          flag = true
+        }
+      }).then(() => {
+        if (!flag) {
+          window.location.replace('userConfig.html')
+        }
+      })
+  }
+})
 
 
-  // FirebaseUI config.
-  var uiConfig = {
-    signInFlow: 'popup',
-    signInSuccessUrl: 'userConfig.html',
-    signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-
-    ],
-    // tosUrl and privacyPolicyUrl accept either url string or a callback
-    // function.
-    // Terms of service url/callback.
-    tosUrl: '<your-tos-url>',
-    // Privacy policy url/callback.
-    privacyPolicyUrl: function () {
-      window.location.assign('<your-privacy-policy-url>');
-    }
-  };
-
-  // Initialize the FirebaseUI Widget using Firebase.
-  var ui = new firebaseui.auth.AuthUI(firebase.auth());
-  // The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig);
-
-});
 
 

@@ -26,18 +26,17 @@ function setInfo() { //Para mostrar la info una vez que ya está puesta
 
         var photoUrl = userInfo.photoURL;
         var uid = userInfo.uid;
+        var email = user.email
         console.log('En setInfo')
         console.log(name)
 
         console.log(photoUrl)
         console.log(uid)
 
-        var docRef = db.collection('users').doc(uid)
+        var docRef = db.collection('doctors').doc(email)
 
         docRef.get().then(function (doc) {
             if (doc.exists) {
-                var fehca = doc.data().nacimiento.toDate().toISOString().slice(0, 10)
-                $('#date_picker').val(fehca)
                 $('#diabetesCombo').val(doc.data().tipoDiabetes)
                 console.log(doc.data().genero)
                 $('#generoCombo').val(doc.data().genero)
@@ -105,7 +104,8 @@ function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el m
 
     var user = firebase.auth().currentUser;
     var uid = user.uid//jala el id del usuario actual
-    var docRef = db.collection('users').doc(uid) //crea una referencia a la base de datos
+    var email = user.email
+    var docRef = db.collection('doctors').doc(email) //crea una referencia a la base de datos
     var time = new Date($('#date_picker').val()) //toma el valor del date picker y crea un objeto de tipo date
     var timestamp = firebase.firestore.Timestamp.fromDate(time) //el objeto de tipo date se convierte a timestamp para que guardar en la base de datos
     var photoUrl = user.photoURL;
@@ -225,18 +225,22 @@ var fileButton = $('#fileButton').change(function (e) {
     console.log('se seleccinó algo')
     var user = firebase.auth().currentUser;
     var uid = user.uid;
+    var email = user.email
     var file = e.target.files[0];
+    const fileType = file['type'];
+    const validImageTypes = ['image/jpeg', 'image/png'];
+
+    if (!validImageTypes.includes(fileType)) {
+        Swal.fire({
+            type: 'warning',
+            title: 'imagenes inválidas',
+            text: 'Por favor selecione una imagen de tipo png/jpeg'
+        })
+        return false
+    }
 
 
-    var storageRef = firebase.storage().ref('user/' + uid + '/profile_pic')
-
-   /*  storageRef.delete().then(function () {
-        console.log(' se eliminó')
-    }).catch(function (error) {
-        console.log(' error')
-    });
- */
-
+    var storageRef = firebase.storage().ref('doctors/' + email + '/profile_pic')
 
     var task = storageRef.put(file)
 
