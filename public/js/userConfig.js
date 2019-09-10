@@ -1,42 +1,41 @@
+
+
 firebase.auth().onAuthStateChanged(function (user) { // se activa cada vez que entra un usuario a la app
     if (user) {
+
+
         if (user.metadata.creationTime === user.metadata.lastSignInTime) {
+
             $('#photo').attr("src", 'https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png')
             $('.photo').attr("src", 'https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png')
-            getModalForNewUser()
             $('#exampleModalCenter').modal({ backdrop: 'static', keyboard: false })
             $('#exampleModalCenter').modal('show');
 
         } else {
             window.location.replace('home.html')
         }
+
     } else {
         window.location.replace('index.html')
         console.log("sin usuario")
     }
 });
 
-
-
-function getModalForNewUser() {
-
-    var userInfo = firebase.auth().currentUser;
-
-}
-
-function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el modal
+function saveUserInfo() { //PARA DOCTOR
 
     var user = firebase.auth().currentUser;
     var email = user.email
     var docRef = db.collection('doctors').doc(email) //crea una referencia a la base de datos
-    var photoUrl = user.photoURL;
-
 
     console.log($('#name').val())
-    console.log($('#generoCombo').val())
-    console.log($('#diabetesCombo').val())
+    console.log($('#phone').val())
+    console.log($('#address').val())
+    console.log($('#schedule1').val())
+    console.log($('#schedule2').val())
 
-    if ($('#name').val() == '' || $('#generoCombo').val() == '' || $('#diabetesCombo').val() == '') {
+
+
+    if ($('#name').val() == null || $('#name').val().length <= 0 || $('#phone').val() == null || $('#phone').val().length <= 0 || $('#address').val() == null || $('#address').val().length <= 0 || $('#schedule1').val() == null || $('#schedule1').val().length <= 0 || $('#schedule2').val() == null || $('#schedule2').val().length <= 0) {
 
         Swal.fire(
             'Campos vacíos',
@@ -47,14 +46,16 @@ function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el m
     }
     else { //Si los inputs están llenos , hace lo siguiente
 
-        if (photoUrl == null) { // SI NO SELECCINÓ FOTO, HACE ESTO
+        if (user.photoUrl == null) { // SI NO SELECCINÓ FOTO, HACE ESTO
             user.updateProfile({
                 displayName: $('#name').val(),
                 photoURL: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png'
             }).then(function () {
                 docRef.set({
-                    genero: $('#generoCombo').val(),
-                    tipoDiabetes: $('#diabetesCombo').val()
+                    direccion: $('#address').val(),
+                    telefono: $('#phone').val(),
+                    horarioEntrada: $('#schedule1').val(),
+                    horarioSalida: $('#schedule2').val()
                 }).then(function () {
                     console.log("Document successfully written!");
                     Swal.fire({
@@ -63,8 +64,10 @@ function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el m
                         text: 'La información se guardó correctamente'
 
                     })
-                    window.location.replace('home.html')
-                    $('#exampleModalCenter').modal('hide');
+                    setTimeout(() => {
+                        $('#exampleModalCenter').modal('hide');
+                        window.location.replace('home.html')
+                    }, 2500);
 
                 }).catch(function (error) {
                     console.error("Error writing document: ", error);
@@ -89,11 +92,13 @@ function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el m
             console.log($('#emailId').val())
             user.updateProfile({
                 displayName: $('#name').val(),
-                photoURL: photoUrl
+                photoURL: user.photoUrl
             }).then(function () {
                 docRef.set({
-                    genero: $('#generoCombo').val(),
-                    tipoDiabetes: $('#diabetesCombo').val()
+                    direccion: $('#address').val(),
+                    telefono: $('#phone').val(),
+                    horarioEntrada: $('#schedule1').val(),
+                    horarioSalida: $('#schedule2').val()
                 }).then(function () {
                     console.log("Document successfully written!");
                     Swal.fire({
@@ -102,8 +107,10 @@ function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el m
                         text: 'La información se guardó correctamente'
 
                     })
-                    window.location.replace('home.html')
-                    $('#exampleModalCenter').modal('hide');
+                    setTimeout(() => {
+                        $('#exampleModalCenter').modal('hide');
+                        window.location.replace('home.html')
+                    }, 2500);
 
                 }).catch(function (error) {
                     console.error("Error writing document: ", error);
@@ -124,24 +131,18 @@ function saveUserInfo() { // se aactiva cuando la dan en guardar cmabios en el m
                 return false
             });
         }
-
-
-    }
-
-
-
+    } 
 }
 
 var fileButton = $('#fileButton').change(function (e) {
 
     console.log('se seleccinó algo')
     var user = firebase.auth().currentUser;
-    var uid = user.uid;
     var email = user.email
     var file = e.target.files[0];
     const fileType = file['type'];
     const validImageTypes = ['image/jpeg', 'image/png'];
-    
+
     if (!validImageTypes.includes(fileType)) {
         Swal.fire({
             type: 'warning',
@@ -177,9 +178,5 @@ var fileButton = $('#fileButton').change(function (e) {
                 text: 'Algo salió mal, intentelo más tarde'
             })
         });
-
-
     })
-
-
 })
