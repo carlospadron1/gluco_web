@@ -64,10 +64,12 @@
 				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
 				<ul class="nav nav-pills flex-column sidebar-nav">
 					<li class="nav-item"><a class="nav-link " href="home.html"><em class="fa fa-dashboard"></em>
-							Gráficas <span class="sr-only">(current)</span></a></li>
+							Consultas <span class="sr-only">(current)</span></a></li>
 					<li class="nav-item"><a class="nav-link active" href="dietas.html"><em
 								class="fa fa-calendar-o"></em>
 							Dietas</a></li>
+					<li class="nav-item"><a class="nav-link" href="pacientes.html"><em class="fa fa-user"></em>
+							Pacientes <span class="sr-only">(current)</span></a></li>
 					<a onclick="logout()" class="logout-button"><em class="fa fa-power-off"></em> Signout</a>
 			</nav>
 			<main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
@@ -95,21 +97,35 @@
 
 
 				<!-- contenido -->
+
 				<section class="row">
-					<div style="margin-bottom: 20px" class="d-flex">
-						<div class="d-flex">
-							<button type="button" onclick="addDiet()" style="background-color:cornflowerblue" class="btn btn-info btn-circle btn-lg"><i
-									class="fa fa-plus" style="font-size:20px; padding-top:6px;"></i></button>
-							<h5 style="margin-top: auto; margin-bottom: auto; display:flex; padding-left:10px">Agregar
-								nueva dieta</h5>
-						</div>
-
-
+					<div class="col-lg-4  form-group text-center">
+						<label for="inputState">Selecciona un paciente: </label>
+						<select id="inputState" class="form-control">
+							<option value=" ">Seleccione</option>
+							<option value="paciente1">paciente1</option>
+							<option value="paciente2">paciente2</option>
+							<option value="paciente3">paciente3</option>
+						</select>
 					</div>
+					<div class="col-lg-8 col-md-12">
+						<div class="d-flex mt-4 text-center align-content-center justify-content-center">
+							<button type="button" onclick="addDiet()" data-toggle="modal" data-target="#ModalDieta"
+								style="background-color:cornflowerblue" class="btn btn-info btn-circle btn-lg"><i
+									class="fa fa-plus" style="font-size:20px; padding-top:6px;"></i></button>
+							<h5 style="margin-top: auto; margin-bottom: auto; display:flex; padding-left:10px"
+								class="text-center">
+								Agregar
+								nuevo paciente</h5>
+						</div> <br>
+					</div>
+
+
 					<div class="col-sm-12">
 						<section class="row">
 							<div id="ref" class="col-md-12 col-lg-12">
-							
+
+
 							</div>
 
 						</section>
@@ -151,7 +167,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-									¿Está seguro que desea eliminar esta dieta?
+								¿Está seguro que desea eliminar esta dieta?
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -177,7 +193,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-									¿Está seguro que desea eliminar esta dieta?
+								¿Está seguro que desea eliminar esta dieta?
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -202,21 +218,33 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form>
+								<form class="">
+									<label for="inputState">Paciente: </label>
+									<select id="inputState" class="form-control">
+										<option value=" ">Seleccione un paciente</option>
+										<option value="paciente1">paciente1</option>
+										<option value="paciente2">paciente2</option>
+										<option value="paciente3">paciente3</option>
+									</select><br>
 									<label for="">Nombre de la dieta</label><br>
-									<input type="text" id="dietName"><br>
+									<input type="text" id="dietName" class="form-control"><br>
 									<label for="">Desayuno</label><br>
-									<textarea name="desayuno" id="desayuno" cols="30" rows="2"></textarea> <br>
+									<textarea name="desayuno" id="desayuno" cols="30" rows="2"
+										class="form-control"></textarea> <br>
 									<label for="">Comida</label><br>
-									<textarea name="comida" id="comida" cols="30" rows="2"></textarea><br>
+									<textarea name="comida" id="comida" cols="30" rows="2"
+										class="form-control"></textarea><br>
 									<label for="">Cena</label><br>
-									<textarea name="cena" id="cena" cols="30" rows="2"></textarea>
+									<textarea name="cena" id="cena" cols="30" rows="2" class="form-control"></textarea>
+
+
+
 								</form>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 								<button type="button" onclick="checkInputs()" class="btn btn-primary">Guardar Dieta
-									</button>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -301,7 +329,7 @@
 		crossorigin="anonymous"></script>
 	<script src="dist/js/bootstrap.min.js"></script>
 	<!-- JS principal -->
-	<script src="js/home.js"></script>
+	<!-- <script src="js/home.js"></script> -->
 	<script src="js/script.js"></script>
 	<!-- JS principal -->
 	<script src="js/file.js"></script>
@@ -310,7 +338,7 @@
 	<script src="js/easypiechart.js"></script>
 	<script src="js/easypiechart-data.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/custom.js"></script>
+	<!-- 	<script src="js/custom.js"></script> -->
 	<script>
 		var startCharts = function () {
 			var chart1 = document.getElementById("line-chart").getContext("2d");

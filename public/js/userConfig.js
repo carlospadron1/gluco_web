@@ -25,7 +25,7 @@ function saveUserInfo() { //PARA DOCTOR
 
     var user = firebase.auth().currentUser;
     var email = user.email
-    var docRef = db.collection('doctors').doc(email) //crea una referencia a la base de datos
+    var docRef = db.collection('doc').doc(email) //crea una referencia a la base de datos
 
     console.log($('#name').val())
     console.log($('#phone').val())
@@ -153,7 +153,7 @@ var fileButton = $('#fileButton').change(function (e) {
     }
 
 
-    var storageRef = firebase.storage().ref('doctors/' + email + '/profile_pic')
+    var storageRef = firebase.storage().ref('doc/' + email + '/profile_pic')
 
     var task = storageRef.put(file)
 

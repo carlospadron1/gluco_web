@@ -513,6 +513,11 @@ code {
     margin-bottom: 0;
     width: 100%; }
 
+    #photo{
+      max-width: 218px;
+      max-height: 218px;
+    }
+
 .profile-photo {
   border-radius: 499rem;
   float: left; }
@@ -870,4 +875,11 @@ table, td, tr, th, thead {
   color: #fff;
   background-color: red;
   border-color:red;
+}
+
+@media  (max-width:400px){
+  .select-paciente{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
