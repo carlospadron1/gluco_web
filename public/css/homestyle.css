@@ -63,11 +63,13 @@ a, a:visited {
   color: #0cad5a; }
 
 a:hover, a:focus, a:active {
-  color: #0cad5a;
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
   text-decoration: none; }
 
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
-  background-color: #0cad5a; }
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%); }
 
 h1 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -154,12 +156,14 @@ code {
   background-color: #f7f7f7; }
 
 .btn-primary, .btn-primary.disabled, .btn-primary:disabled, .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary.active, .show > .btn-outline-primary.dropdown-toggle, .card-primary, .page-item.active .page-link, .list-group-item.active {
-  background-color: #0cad5a !important;
-  border-color: #0cad5a !important; }
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);;
+  border-color: #d22300 !important; }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
-  background-color: #0cad5a !important;
-  border-color: #0cad5a !important; 
+  background: rgb(210,35,0);
+  background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
+  border-color: #d22300 !important; 
   opacity: 0.70;
 }
   
@@ -192,7 +196,8 @@ code {
   border-radius: 499px; }
 
 .nav-pills .nav-link.active, .badge-primary[href]:focus, .badge-primary[href]:hover, a.bg-primary:focus, a.bg-primary:hover {
-  background-color: #1ee67f !important; 
+  background: rgb(210,35,0) !important;
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%) !important;
  
 }
 
@@ -201,25 +206,28 @@ code {
 
 .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #ffffff !important;
-  background-color: #0cad5a;
-  border-color: #0cad5a; 
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
+  border-color: #d22300; 
   
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #0cad5a;
-  border-color: #0cad5a; 
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
+  border-color: #d22300; 
   opacity: 0.70;
 }
 
 .btn-outline-primary, .btn-outline-primary:visited {
   color: #0cad5a;
-  border-color: #0cad5a;
+  border-color: #d22300;
   background: none; }
 
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
-  background-color: #0cad5a;
-  border-color: #0cad5a;
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
+  border-color: #d22300;
   color: #ffffff; 
   opacity: 0.70;
 }
@@ -284,7 +292,8 @@ code {
 
 .btn-subtle:hover, .btn-subtle:focus, .btn-subtle:active {
   color: #ffffff;
-  background-color: #0cad5a;
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
   outline: none; 
   opacity: 0.70;
 }
@@ -346,7 +355,8 @@ code {
   overflow-x: hidden;
   overflow-y: auto;
   /* Scrollable contents if viewport is shorter than content. */
-  background: #0cad5a; }
+  background: rgb(10,73,123);
+    background: linear-gradient(315deg, rgba(10,73,123,1) 0%, rgba(31,69,84,1) 100%); }
   .sidebar a {
     color: #ffffff;
     text-transform: uppercase;
@@ -430,7 +440,8 @@ code {
     margin-bottom: 1rem; }
 
   #menu-toggle {
-    background-color: #0cad5a; } }
+    background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%); } }
 @media screen and (min-width: 576px) {
   #wrapper.toggled .sidebar-nav {
     display: block; }
@@ -582,7 +593,8 @@ code {
 
 .datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active:focus, .datepicker table tr td.active:hover:focus, .datepicker table tr td.active.disabled:focus, .datepicker table tr td.active.disabled:hover:focus, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.active, .datepicker table tr td.active:hover.active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:hover.active, .open .dropdown-toggle.datepicker table tr td.active, .open .dropdown-toggle.datepicker table tr td.active:hover, .open .dropdown-toggle.datepicker table tr td.active.disabled, .open .dropdown-toggle.datepicker table tr td.active.disabled:hover {
   color: #ffffff;
-  background-color: #0cad5a;
+  background: rgb(210,35,0);
+background: linear-gradient(315deg, rgba(210,35,0,1) 0%, rgba(212,34,5,1) 100%);
   text-shadow: none;
   border-color: #285e8e;
   opacity: 0.70;
